@@ -1,0 +1,34 @@
+{% assign sum = site.posts | size %}
+
+<nav class="nav__list">
+    <br>
+    <input id="ac-toc" name="accordion-toc" type="checkbox" />
+    <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+    <ul class="nav__items" id="category_tag_menu">
+        <li>
+            <span>🔥 전체</style> <span> </span><span>(</span><span>{{sum}}</style><span>)</style>
+        </li>
+        
+        <li>
+            <span class="nav__sub-title">Back-End 🌀</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Spring" %}
+                        <li><a href="/categories/Spring" class="">Spring ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <span class="nav__sub-title">일상 💬</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Memoir" %}
+                        <li><a href="/categories/Memoir" class="">회고 ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% if category[0] == "etc" %}
+                        <li><a href="/categories/etc" class="">기타 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+    </ul>
+</nav>

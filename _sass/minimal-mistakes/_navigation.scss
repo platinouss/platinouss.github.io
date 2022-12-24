@@ -91,6 +91,7 @@
       &.current.disabled {
         color: #fff;
         background: $primary-color;
+        color: $background-color;
       }
 
       &.disabled {
@@ -484,7 +485,7 @@
   margin: 0;
   padding: 0.5rem 0.75rem;
   font-family: $sans-serif-narrow;
-  font-size: $type-size-5;
+  font-size: 0.9em;
   font-weight: bold;
 }
 
@@ -493,10 +494,10 @@
   margin: 0.5rem 0;
   padding: 0.25rem 0;
   font-family: $sans-serif-narrow;
-  font-size: $type-size-6;
+  font-size: 0.9em;
   font-weight: bold;
-  text-transform: uppercase;
-  border-bottom: 1px solid $border-color;
+  // text-transform: uppercase;
+  // border-bottom: 1px solid $border-color;
 }
 
 /*
@@ -505,24 +506,22 @@
 
 .toc {
   font-family: $sans-serif-narrow;
-  color: $gray;
-  background-color: $background-color;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  -webkit-box-shadow: $box-shadow;
-  box-shadow: $box-shadow;
+  border-left: 1px solid $border-color;
+  text-decoration: none;
+  margin-bottom: 0;
 
   .nav__title {
-    color: #fff;
-    font-size: $type-size-6;
-    background: $primary-color;
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    color: $primary-color;
+    font-size: $type-size-5;
   }
 
   // Scrollspy marks toc items as .active when they are in focus
   .active a {
-    @include yiq-contrasted($active-color);
+    // @include yiq-contrasted($active-color);
+    font-size: $type-size-5;
+    font-weight: bold;
+    color: $link-color;
+    text-decoration: none;
   }
 }
 
@@ -531,22 +530,24 @@
   padding: 0;
   width: 100%;
   list-style: none;
-  font-size: $type-size-6;
+  font-size: $type-size-5;
 
   @include breakpoint($large) {
-    font-size: $type-size-7;
+    font-weight: bold;
+    font-size: $type-size-6;
   }
 
   a {
     display: block;
     padding: 0.25rem 0.75rem;
     color: $muted-text-color;
-    font-weight: bold;
+    font-weight: normal;
     line-height: 1.5;
-    border-bottom: 1px solid $border-color;
 
     &:hover {
-      color: $text-color;
+      font-size: $type-size-5;
+      font-weight: bold;
+      text-decoration: none;
     }
   }
 
@@ -568,6 +569,6 @@
   }
 
   li ul li ul li ul li ul li ul > li a {
-    padding-left: 3.25rem
+    padding-left: 3.25rem;
   }
 }

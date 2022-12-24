@@ -1,6 +1,10 @@
 /* ==========================================================================
    SINGLE PAGE/POST
    ========================================================================== */
+* {
+  font-family: $sans-serif
+}
+
 
 #main {
   @include clearfix;
@@ -69,16 +73,16 @@ body {
 }
 
 .page__title {
-  margin-top: 0;
+  margin-top: 1em;
   line-height: 1;
 
   a {
-    color: $text-color;
+    color: $primary-color;
     text-decoration: none;
   }
 
   & + .page__meta {
-    margin-top: -0.5em;
+    margin-top: 0.2em;
   }
 }
 
@@ -174,6 +178,10 @@ body {
     margin-top: -1.5em;
     padding-left: 1.25rem;
   }
+}
+
+#page-title {
+  color: $primary-color;
 }
 
 .page__hero {
@@ -329,12 +337,16 @@ body {
    ========================================================================== */
 
 .page__taxonomy {
+  margin-top: 0.5em;
+  margin-bottom: 0;
+
   .sep {
     display: none;
   }
 
   strong {
-    margin-right: 10px;
+    margin-right: 1px;
+    // font-size: $type-size-6;
   }
 }
 
