@@ -10,7 +10,7 @@
         </li>
         
         <li>
-            <span class="nav__sub-title">Back-End 🌀</span>
+            <span class="nav__sub-title">🌀 Back-End</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Spring" %}
@@ -18,7 +18,18 @@
                     {% endif %}
                 {% endfor %}
             </ul>
-            <span class="nav__sub-title">일상 💬</span>
+            <span class="nav__sub-title">📘 도서 리뷰</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Programming-Language" %}
+                        <li><a href="/categories/Programming-Language" class="">개발 언어 ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% if category[0] == "System-Design" %}
+                        <li><a href="/categories/System-Design" class=""> - 대규모 시스템 설계 기초 ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <span class="nav__sub-title">💬 일상</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Memoir" %}
