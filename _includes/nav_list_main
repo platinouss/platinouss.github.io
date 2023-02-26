@@ -10,11 +10,18 @@
         </li>
         
         <li>
-            <span class="nav__sub-title">🌀 Back-End</span>
+            <span class="nav__sub-title">🌀 Back-end</span>
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "Spring" %}
                         <li><a href="/categories/Spring" class="">Spring ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "User-Auth" %}
+                        <li><a href="/categories/User-Auth" class=""> - 사용자 인증/인가 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
