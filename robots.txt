@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://platinouss.github.io/sitemap.xml
