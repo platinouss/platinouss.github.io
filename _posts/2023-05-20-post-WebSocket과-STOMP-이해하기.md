@@ -95,7 +95,7 @@ public class GreetingController {
 
 * **@SendTo**  
   * 특정 Topic을 subscribe한 모든 사람에게 반환 값을 전달한다.  
-  * 위의 예시에서는, /topic/greetings을 subscribe 한 모든 사람에게 Greeting 객체를 전달한다.
+  * 위의 예시에서는 /topic/greetings을 subscribe 한 모든 사람에게 Greeting 객체를 전달한다.
 
 ### WebSocketConfig
 다음으로 살펴볼 부분은 WebSocketConfig 부분이다.
@@ -125,8 +125,9 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 * **void configureMessageBroker(MessageBrokerRegistry config)**  
   * Message Broker를 구성하는 메서드이다.  
   * enableSimpleBroker()를 호출하여, 메모리 기반 Message Broker가 /topic과 /queue 접두사가 붙은 메시지를 처리하고, 클라이언트에게 다시 전달할 수 있도록 한다.
-  * setApplicationDestinationPrefixes()를 호출하여, @MessageMapping 어노테이션에서 지정한 경로에 접두사 /app을 붙인다. 따라서 클라이언트에서 /app/hello 경로로 메시지를 보내면 GreetingController.greeting() 메서드가 처리한다.
-  * 정리하자면, enableSimpleBroker() 메서드에 파라미터로 넘겨주는 접두사(예시에서는 /topic 또는 /queue)가 붙은 요청은 Message Broker가 처리하고, setApplicationDestinationPrefixes() 메서드에 파라미터로 넘겨주는 접두사(예시에서는 /app)가 붙은 요청은 Controller에서 @MessageMapping 어노테이션이 붙은 메서드가 직접 처리한다고 생각하면 된다.
+  * setApplicationDestinationPrefixes()를 호출하여, @MessageMapping 어노테이션에서 지정한 경로에 접두사 /app을 붙인다. 따라서 클라이언트에서 /app/hello 경로로 메시지를 보내면 GreetingController.greeting() 메서드가 처리한다.  
+
+> 정리하면, enableSimpleBroker() 메서드에 파라미터로 넘겨주는 접두사(예시에서는 /topic 또는 /queue)가 붙은 요청은 Message Broker가 처리하고, setApplicationDestinationPrefixes() 메서드에 파라미터로 넘겨주는 접두사(예시에서는 /app)가 붙은 요청은 Controller에서 @MessageMapping 어노테이션이 붙은 메서드가 직접 처리한다고 생각하시면 됩니다.
 
 * **void registerStompEndpoints(StompEndpointRegistry registry)**  
   * /gs-guide-websocket이라는 endpoint를 등록하여 클라이언트 단에서 WebSocket을 사용할 수 없는 경우, 대체할 수 있는 전송 방식을 사용하도록 SockJS fallback 옵션을 활성화하는 메서드이다.  
