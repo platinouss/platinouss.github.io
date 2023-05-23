@@ -1,11 +1,10 @@
 ---
-title: "Spring"
+title: "backend-project"
 layout: archive
-permalink: categories/Spring
+permalink: categories/backend-project
 author_profile: true
 sidebar_main: true
 ---
 
-
-{% assign posts = site.categories.Spring %}
+{% assign posts = site.categories.backend-project %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}
