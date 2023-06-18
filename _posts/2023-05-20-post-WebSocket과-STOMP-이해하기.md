@@ -3,7 +3,7 @@ title:  "[smallTalk] 1. WebSocket과 STOMP 이해하기"
 excerpt: "최소 기능을 제공하는 STOMP 기반 메시징 서비스를 만들어 보면서, Spring에서 WebSocket과 STOMP을 활용하는 방법을 익혀보자."
 
 categories:
-  - backend-project
+  - Backend-project
   - smallTalk
 tags:
   - WebSocket

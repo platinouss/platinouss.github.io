@@ -6,14 +6,23 @@
     <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
     <ul class="nav__items" id="category_tag_menu">
         <li>
-            <span>🔥 전체</style> <span> </span><span>(</span><span>{{sum}}</style><span>)</style>
+            <span>전체</style> <span> </span><span>(</span><span>{{sum}}</style><span>)</style>
         </li>
         
         <li>
-            <span class="nav__sub-title">🌀 Back-end</span>
+            <span class="nav__sub-title">🔥 Kotlin & Java</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "backend-project" %}
+                    {% if category[0] == "JVM" %}
+                        <li><a href="/categories/JVM" class=""> - JVM ({{category[1].size}})</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
+
+            <span class="nav__sub-title">🌀 Backend</span>
+            <ul>
+                {% for category in site.categories %}
+                    {% if category[0] == "Backend-project" %}
                         <li><a href="/categories/backend-project" class=""> - 프로젝트 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
@@ -21,10 +30,11 @@
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "User-Auth" %}
-                        <li><a href="/categories/User-Auth" class=""> - 사용자 인증/인가 ({{category[1].size}})</a></li>
+                        <li><a href="/categories/User-Auth" class=""> - 사용자 인증 / 인가 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
+
             <span class="nav__sub-title">📘 도서 리뷰</span>
             <ul>
                 {% for category in site.categories %}
@@ -36,6 +46,7 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+
             <span class="nav__sub-title">💬 일상</span>
             <ul>
                 {% for category in site.categories %}
