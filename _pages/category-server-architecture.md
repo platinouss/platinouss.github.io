@@ -1,11 +1,11 @@
 ---
-title: "대규모 시스템 설계 기초"
+title: "Server Architecture"
 layout: archive
-permalink: categories/System-Design
+permalink: categories/server-architecture
 author_profile: true
 sidebar_main: true
 ---
 
 
-{% assign posts = site.categories.System-Design %}
+{% assign posts = site.categories.server-architecture %}
 {% for post in posts %} {% include archive-single.html type=page.entries_layout %} {% endfor %}

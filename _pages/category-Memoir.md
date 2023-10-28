@@ -1,7 +1,7 @@
 ---
 title: "회고"
 layout: archive
-permalink: categories/Memoir
+permalink: categories/memoir
 author_profile: true
 sidebar_main: true
 ---

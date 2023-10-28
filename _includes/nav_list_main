@@ -10,39 +10,32 @@
         </li>
         
         <li>
-            <span class="nav__sub-title">🔥 Kotlin & Java</span>
+            <span class="nav__sub-title">🔥 Java & Kotlin</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "JVM" %}
-                        <li><a href="/categories/JVM" class=""> - JVM ({{category[1].size}})</a></li>
+                    {% if category[0] == "jvm" %}
+                        <li><a href="/categories/jvm" class=""> - JVM ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
 
-            <span class="nav__sub-title">🌀 Backend</span>
+            <span class="nav__sub-title">🗄️ Backend</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Backend-project" %}
-                        <li><a href="/categories/backend-project" class=""> - 프로젝트 ({{category[1].size}})</a></li>
+                    {% if category[0] == "server-architecture" %}
+                        <li><a href="/categories/server-architecture" class=""> - 아키텍처 설계 ({{category[1].size}})</a></li>
                     {% endif %}
-                {% endfor %}
-            </ul>
-            <ul>
-                {% for category in site.categories %}
-                    {% if category[0] == "User-Auth" %}
-                        <li><a href="/categories/User-Auth" class=""> - 사용자 인증 / 인가 ({{category[1].size}})</a></li>
+                    {% if category[0] == "user-auth" %}
+                        <li><a href="/categories/user-auth" class=""> - 사용자 인증 / 인가 ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
 
-            <span class="nav__sub-title">📘 도서 리뷰</span>
+            <span class="nav__sub-title">🐧 Linux</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Programming-Language" %}
-                        <li><a href="/categories/Programming-Language" class=""> - 개발 언어 ({{category[1].size}})</a></li>
-                    {% endif %}
-                    {% if category[0] == "System-Design" %}
-                        <li><a href="/categories/System-Design" class=""> - 대규모 시스템 설계 기초 ({{category[1].size}})</a></li>
+                    {% if category[0] == "linux-kernel" %}
+                        <li><a href="/categories/linux-kernel" class=""> - Linux kernel ({{category[1].size}})</a></li>
                     {% endif %}
                 {% endfor %}
             </ul>
@@ -50,8 +43,8 @@
             <span class="nav__sub-title">💬 일상</span>
             <ul>
                 {% for category in site.categories %}
-                    {% if category[0] == "Memoir" %}
-                        <li><a href="/categories/Memoir" class="">회고 ({{category[1].size}})</a></li>
+                    {% if category[0] == "memoir" %}
+                        <li><a href="/categories/memoir" class="">회고 ({{category[1].size}})</a></li>
                     {% endif %}
                     {% if category[0] == "etc" %}
                         <li><a href="/categories/etc" class="">기타 ({{category[1].size}})</a></li>
