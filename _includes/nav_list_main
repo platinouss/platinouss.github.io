@@ -55,6 +55,12 @@
                 {% endfor %}
             </ul>
 
+            {% for category in site.categories %}
+            {% if category[0] == "dev-story" %}
+                <span class="nav__sub-title"><a href="/categories/dev-story" class="">📒 개발 일지 ({{category[1].size}})</a></span>
+            {% endif %}
+            {% endfor %}
+
             <span class="nav__sub-title">💬 일상</span>
             <ul>
                 {% for category in site.categories %}
