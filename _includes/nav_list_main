@@ -10,7 +10,11 @@
         </li>
         
         <li>
-            <span class="nav__sub-title">🔥 Java & Kotlin</span>
+            {% for category in site.categories %}
+                {% if category[0] == "java-kotlin" %}
+                    <span class="nav__sub-title"><a href="/categories/java-kotlin" class="">🔥 Java & Kotlin ({{category[1].size}})</a></span>
+                {% endif %}
+            {% endfor %}
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "jvm" %}
@@ -19,11 +23,18 @@
                 {% endfor %}
             </ul>
 
-            <span class="nav__sub-title">🗄️ Backend</span>
+            {% for category in site.categories %}
+                {% if category[0] == "backend" %}
+                    <span class="nav__sub-title"><a href="/categories/backend" class="">🗄️ Backend ({{category[1].size}})</a></span>
+                {% endif %}
+            {% endfor %}
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "server-architecture" %}
                         <li><a href="/categories/server-architecture" class=""> - 아키텍처 설계 ({{category[1].size}})</a></li>
+                    {% endif %}
+                    {% if category[0] == "database" %}
+                        <li><a href="/categories/database" class=""> - 데이터베이스 ({{category[1].size}})</a></li>
                     {% endif %}
                     {% if category[0] == "user-auth" %}
                         <li><a href="/categories/user-auth" class=""> - 사용자 인증 / 인가 ({{category[1].size}})</a></li>
@@ -31,7 +42,11 @@
                 {% endfor %}
             </ul>
 
-            <span class="nav__sub-title">🐧 Linux</span>
+            {% for category in site.categories %}
+                {% if category[0] == "linux" %}
+                    <span class="nav__sub-title"><a href="/categories/linux" class="">🐧 Linux ({{category[1].size}})</a></span>
+                {% endif %}
+            {% endfor %}
             <ul>
                 {% for category in site.categories %}
                     {% if category[0] == "linux-kernel" %}
